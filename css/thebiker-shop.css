@@ -1287,14 +1287,15 @@ html[data-theme="light"] .brand-logo {
 }
 
 html[data-theme="light"] .hero-bike {
-  opacity: 0.34;
-  filter: saturate(0.88) contrast(1.08);
+  opacity: 0.54;
+  filter: saturate(0.95) contrast(1.16);
 }
 
 html[data-theme="light"] .hero-vignette {
   background:
-    linear-gradient(to top, #f5f5f3 0%, rgba(245, 245, 243, 0.5) 42%, rgba(245, 245, 243, 0.14) 100%),
-    linear-gradient(to right, rgba(245, 245, 243, 0.86) 0%, rgba(245, 245, 243, 0.52) 44%, rgba(245, 245, 243, 0.18) 76%, rgba(245, 245, 243, 0.62) 100%);
+    linear-gradient(to top, rgba(224, 224, 220, 0.92) 0%, rgba(224, 224, 220, 0.42) 38%, rgba(224, 224, 220, 0.08) 100%),
+    linear-gradient(to right, rgba(240, 240, 236, 0.88) 0%, rgba(240, 240, 236, 0.42) 42%, rgba(240, 240, 236, 0.06) 72%, rgba(232, 232, 228, 0.48) 100%),
+    linear-gradient(135deg, rgba(17, 17, 17, 0.08) 0%, transparent 38%, rgba(17, 17, 17, 0.1) 100%);
 }
 
 html[data-theme="light"] .hero-line-solid {
@@ -1393,6 +1394,54 @@ html[data-theme="light"] .footer-bottom p {
 
 html[data-theme="light"] .footer-squares span {
   background: rgba(17, 17, 17, 0.14);
+}
+
+html[data-theme="light"] .hero {
+  background: #050505;
+}
+
+html[data-theme="light"] .hero-bike {
+  opacity: 0.62;
+  filter: saturate(1.02) contrast(1.08);
+}
+
+html[data-theme="light"] .hero-vignette {
+  background:
+    linear-gradient(to top, #050505 0%, rgba(5, 5, 5, 0.44) 45%, transparent 100%),
+    linear-gradient(to right, rgba(5, 5, 5, 0.76) 0%, rgba(5, 5, 5, 0.36) 42%, transparent 76%, rgba(5, 5, 5, 0.56) 100%);
+}
+
+html[data-theme="light"] .hero-line-solid {
+  color: #fff;
+}
+
+html[data-theme="light"] .hero-line-outline {
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.84);
+}
+
+html[data-theme="light"] .hero-copy {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+html[data-theme="light"] .hero-badge strong {
+  color: #fff;
+}
+
+html[data-theme="light"] .hero-badge span {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+html[data-theme="light"] .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="light"] .btn-secondary:hover,
+html[data-theme="light"] .btn-secondary:focus-visible {
+  border-color: var(--brand-orange);
+  color: var(--brand-orange);
+  background: rgba(255, 95, 31, 0.08);
 }
 
 .shop-page {
@@ -2564,7 +2613,7 @@ html[data-theme="light"] .footer-squares span {
 
   html[data-theme="light"] .hero-vignette {
     background:
-      linear-gradient(to top, #f5f5f3 0%, rgba(245, 245, 243, 0.62) 48%, rgba(245, 245, 243, 0.18) 100%),
-      linear-gradient(to right, rgba(245, 245, 243, 0.9) 0%, rgba(245, 245, 243, 0.56) 62%, rgba(245, 245, 243, 0.22) 100%);
+      linear-gradient(to top, #050505 0%, rgba(5, 5, 5, 0.52) 52%, transparent 100%),
+      linear-gradient(to right, rgba(5, 5, 5, 0.78) 0%, rgba(5, 5, 5, 0.44) 66%, rgba(5, 5, 5, 0.24) 100%);
   }
 }
