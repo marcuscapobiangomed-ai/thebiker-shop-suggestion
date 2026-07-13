@@ -151,4 +151,205 @@
     setHeroIndex(heroIndex);
     startHeroTimer();
   }
+
+  var catalogRoot = document.querySelector("[data-catalog-root]");
+
+  if (catalogRoot) {
+    var catalogCards = Array.prototype.slice.call(
+      catalogRoot.querySelectorAll("[data-catalog-card]")
+    );
+    var catalogSearch = catalogRoot.querySelector("[data-catalog-search]");
+    var catalogFilters = Array.prototype.slice.call(
+      catalogRoot.querySelectorAll("[data-catalog-filter]")
+    );
+    var catalogCount = catalogRoot.querySelector("[data-catalog-count]");
+    var activeCatalogFilter = "all";
+
+    try {
+      var catalogParams = new URLSearchParams(window.location.search);
+      if (catalogParams.get("brand")) {
+        activeCatalogFilter = catalogParams.get("brand").toLowerCase();
+      }
+    } catch (error) {
+      activeCatalogFilter = "all";
+    }
+
+    function setActiveFilter(filterValue) {
+      activeCatalogFilter = filterValue || "all";
+
+      catalogFilters.forEach(function (button) {
+        var isActive = (button.getAttribute("data-filter") || "all") === activeCatalogFilter;
+        button.classList.toggle("is-active", isActive);
+      });
+
+      applyCatalogFilters();
+    }
+
+    function applyCatalogFilters() {
+      var query = catalogSearch ? catalogSearch.value.trim().toLowerCase() : "";
+      var visibleCount = 0;
+
+      catalogCards.forEach(function (card) {
+        var terms = (
+          (card.getAttribute("data-terms") || "") +
+          " " +
+          card.textContent
+        ).toLowerCase();
+        var matchesFilter =
+          activeCatalogFilter === "all" ||
+          terms.indexOf(activeCatalogFilter) !== -1;
+        var matchesQuery = !query || terms.indexOf(query) !== -1;
+        var visible = matchesFilter && matchesQuery;
+
+        card.hidden = !visible;
+        if (visible) {
+          visibleCount += 1;
+        }
+      });
+
+      if (catalogCount) {
+        catalogCount.textContent = visibleCount + " itens";
+      }
+    }
+
+    catalogFilters.forEach(function (button) {
+      button.addEventListener("click", function () {
+        setActiveFilter(button.getAttribute("data-filter") || "all");
+      });
+    });
+
+    if (catalogSearch) {
+      catalogSearch.addEventListener("input", applyCatalogFilters);
+    }
+
+    var catalogSearchButton = catalogRoot.querySelector(".search-button");
+
+    if (catalogSearchButton) {
+      catalogSearchButton.addEventListener("click", applyCatalogFilters);
+    }
+
+    setActiveFilter(activeCatalogFilter);
+  }
+
+  var galleryRoot = document.querySelector("[data-gallery-root]");
+
+  if (galleryRoot) {
+    var galleryMain = galleryRoot.querySelector("[data-gallery-main]");
+    var galleryThumbs = Array.prototype.slice.call(
+      galleryRoot.querySelectorAll("[data-gallery-thumb]")
+    );
+
+    galleryThumbs.forEach(function (thumb) {
+      thumb.addEventListener("click", function () {
+        var source = thumb.getAttribute("data-src");
+        var alt = thumb.getAttribute("data-alt") || "";
+
+        if (galleryMain && source) {
+          galleryMain.setAttribute("src", source);
+          galleryMain.setAttribute("alt", alt);
+        }
+
+        galleryThumbs.forEach(function (button) {
+          button.classList.toggle("is-active", button === thumb);
+        });
+      });
+    });
+  }
+
+  var checkoutRoot = document.querySelector("[data-checkout-root]");
+
+  if (checkoutRoot) {
+    var cartItems = Array.prototype.slice.call(
+      checkoutRoot.querySelectorAll("[data-cart-item]")
+    );
+    var subtotalEl = checkoutRoot.querySelector("[data-summary-subtotal]");
+    var shippingEl = checkoutRoot.querySelector("[data-summary-shipping]");
+    var discountEl = checkoutRoot.querySelector("[data-summary-discount]");
+    var totalEl = checkoutRoot.querySelector("[data-summary-total]");
+
+    function formatCurrency(value) {
+      return new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }).format(value);
+    }
+
+    function updateCheckoutTotals() {
+      var subtotal = 0;
+      var paymentMethod = checkoutRoot.querySelector(
+        'input[name="payment"]:checked'
+      );
+      var discountRate = paymentMethod && paymentMethod.value === "pix" ? 0.05 : 0;
+
+      cartItems.forEach(function (item) {
+        var unitPrice = Number(item.getAttribute("data-unit-price") || "0");
+        var qtyValue = item.querySelector("[data-qty-value]");
+        var lineTotal = item.querySelector("[data-line-total]");
+        var quantity = qtyValue ? Number(qtyValue.textContent || "1") : 1;
+        var total = unitPrice * quantity;
+
+        subtotal += total;
+
+        if (lineTotal) {
+          lineTotal.textContent = formatCurrency(total);
+        }
+      });
+
+      var discount = subtotal * discountRate;
+      var shipping = subtotal > 299 ? 0 : 29.9;
+      var totalValue = subtotal - discount + shipping;
+
+      if (subtotalEl) {
+        subtotalEl.textContent = formatCurrency(subtotal);
+      }
+
+      if (shippingEl) {
+        shippingEl.textContent = shipping === 0 ? "Grátis" : formatCurrency(shipping);
+      }
+
+      if (discountEl) {
+        discountEl.textContent = "- " + formatCurrency(discount);
+      }
+
+      if (totalEl) {
+        totalEl.textContent = formatCurrency(totalValue);
+      }
+    }
+
+    cartItems.forEach(function (item) {
+      var minusButton = item.querySelector("[data-qty-minus]");
+      var plusButton = item.querySelector("[data-qty-plus]");
+      var qtyValue = item.querySelector("[data-qty-value]");
+
+      function setQuantity(nextQuantity) {
+        var value = Math.max(1, Math.min(9, nextQuantity));
+        if (qtyValue) {
+          qtyValue.textContent = String(value);
+        }
+        updateCheckoutTotals();
+      }
+
+      if (minusButton) {
+        minusButton.addEventListener("click", function () {
+          var current = qtyValue ? Number(qtyValue.textContent || "1") : 1;
+          setQuantity(current - 1);
+        });
+      }
+
+      if (plusButton) {
+        plusButton.addEventListener("click", function () {
+          var current = qtyValue ? Number(qtyValue.textContent || "1") : 1;
+          setQuantity(current + 1);
+        });
+      }
+    });
+
+    Array.prototype.slice
+      .call(checkoutRoot.querySelectorAll('input[name="payment"]'))
+      .forEach(function (radio) {
+        radio.addEventListener("change", updateCheckoutTotals);
+      });
+
+    updateCheckoutTotals();
+  }
 })();

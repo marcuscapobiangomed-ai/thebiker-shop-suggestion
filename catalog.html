@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Biker Shop - Catálogo</title>
+  <meta name="description" content="Catálogo The Biker Shop com bikes Scott, componentes Shimano, cuidados Muc-Off e acessórios premium prontos para o próximo pedal.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Biker Shop - Catálogo">
+  <meta property="og:description" content="Busque bikes, peças e acessórios premium da curadoria The Biker Shop.">
+  <meta property="og:image" content="assets/thebiker-shop/hero-bike.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Biker Shop - Catálogo">
+  <meta name="twitter:description" content="Busque bikes, peças e acessórios premium da curadoria The Biker Shop.">
+  <link rel="preload" href="assets/fonts/syne-800.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/syne-700.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/thebiker-shop.css?v=thebiker-4">
+</head>
+<body class="shop-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-link" href="index.html" aria-label="The Biker Shop - inicio">
+          <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="catalog.html">Catálogo</a>
+          <a href="product.html">Produto</a>
+          <a href="checkout.html">Checkout</a>
+          <a href="index.html#footer">Suporte</a>
+        </nav>
+
+        <a class="store-btn" href="checkout.html">Carrinho</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-backdrop" hidden></div>
+    <aside class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catálogo</a>
+      <a href="product.html">Produto</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="index.html#footer">Suporte</a>
+      <a href="checkout.html" class="mobile-nav-store">Ir para o carrinho</a>
+    </aside>
+
+    <main class="shop-main" data-catalog-root>
+      <section class="shop-section">
+        <div class="container shop-hero-grid">
+          <div class="shop-card shop-card-pad">
+            <p class="page-kicker">Catálogo The Biker Shop</p>
+            <h1 class="page-title">Busque Scott, Shimano e curadoria premium.</h1>
+            <p class="page-copy">
+              Filtre bikes, peças e acessórios com o mesmo tom premium da marca. A seleção abaixo combina Scott, Shimano, Muc-Off e Fizik em uma vitrine mockada para validar a experiência de compra.
+            </p>
+
+            <div class="search-row" role="search">
+              <input class="search-input" type="search" placeholder="Buscar por Scott, Shimano, Muc-Off..." aria-label="Buscar produtos" data-catalog-search>
+              <button class="search-button" type="button">Buscar</button>
+            </div>
+
+            <div class="chip-row" aria-label="Filtros rápidos">
+              <button class="chip-button is-active" type="button" data-catalog-filter data-filter="all">Tudo</button>
+              <button class="chip-button" type="button" data-catalog-filter data-filter="scott">Scott</button>
+              <button class="chip-button" type="button" data-catalog-filter data-filter="bikes">Bikes</button>
+              <button class="chip-button" type="button" data-catalog-filter data-filter="componentes">Componentes</button>
+              <button class="chip-button" type="button" data-catalog-filter data-filter="vestuario">Vestuário</button>
+              <button class="chip-button" type="button" data-catalog-filter data-filter="acessorios">Acessórios</button>
+            </div>
+          </div>
+
+          <div class="hero-side-stack">
+            <div class="shop-card hero-side-card">
+              <span>Destaque da loja</span>
+              <strong>Scott Spark RC Team Issue</strong>
+              <p>MTB de carbono com assinatura Scott e referência de performance para a curadoria da loja.</p>
+            </div>
+            <div class="shop-card hero-side-card">
+              <span>Condições</span>
+              <strong>12x sem juros</strong>
+              <p>Mock de checkout premium com foco em confiança, frete e opções de pagamento.</p>
+            </div>
+            <div class="shop-card hero-side-card">
+              <span>Curadoria</span>
+              <strong>Scott, Shimano e Muc-Off</strong>
+              <p>Mix de marcas com apelo técnico e visual para sustentar o posicionamento The Biker Shop.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-section">
+        <div class="container catalog-shell">
+          <aside class="shop-card shop-card-pad catalog-filters">
+            <div class="filter-group">
+              <h3>Categorias</h3>
+              <button class="filter-button is-active" type="button" data-catalog-filter data-filter="all">Todos os produtos</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="scott">Scott</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="bikes">Bikes</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="componentes">Componentes</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="vestuario">Vestuário</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="acessorios">Acessórios</button>
+            </div>
+
+            <div class="filter-group">
+              <h3>Marcas</h3>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="scott">Scott</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="shimano">Shimano</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="muc-off">Muc-Off</button>
+              <button class="filter-button" type="button" data-catalog-filter data-filter="fizik">Fizik</button>
+            </div>
+          </aside>
+
+          <div>
+            <div class="catalog-tools">
+              <p><span class="catalog-count" data-catalog-count>6 itens</span> encontrados na curadoria.</p>
+              <p>Ordenação: destaque editorial</p>
+            </div>
+
+            <div class="catalog-grid">
+              <article class="catalog-card" data-catalog-card data-terms="scott bikes mtb carbono spark rc team issue">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/bike-race.jpg" alt="Scott Spark RC Team Issue">
+                  <span class="catalog-badge">Scott</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Scott Spark RC Team Issue</h2>
+                    <span class="catalog-price">R$ 49.900</span>
+                  </div>
+                  <p class="catalog-meta">Bikes / MTB / Carbono</p>
+                  <p class="catalog-copy">Mountain bike de alto desempenho para quem procura uma referência Scott dentro da loja.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-catalog-card data-terms="scott bikes road carbono addict rc 20">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/hero-bike.jpg" alt="Scott Addict RC 20">
+                  <span class="catalog-badge">Scott</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Scott Addict RC 20</h2>
+                    <span class="catalog-price">R$ 39.900</span>
+                  </div>
+                  <p class="catalog-meta">Bikes / Estrada / Carbono</p>
+                  <p class="catalog-copy">Leve, agressiva e preparada para o próximo pedal mais rápido da coleção.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-catalog-card data-terms="scott bikes gravel scale 940 carbon">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/bike-gravel.jpg" alt="Scott Scale 940">
+                  <span class="catalog-badge">Scott</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Scott Scale 940</h2>
+                    <span class="catalog-price">R$ 18.990</span>
+                  </div>
+                  <p class="catalog-meta">Bikes / MTB / Alumínio</p>
+                  <p class="catalog-copy">Uma entrada forte no universo Scott com geometria pronta para trilha e cidade.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-catalog-card data-terms="shimano componentes grupo xt m8100">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/tech-carbon.jpg" alt="Shimano XT M8100 Groupset">
+                  <span class="catalog-badge">Shimano</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Shimano XT M8100</h2>
+                    <span class="catalog-price">R$ 2.490</span>
+                  </div>
+                  <p class="catalog-meta">Componentes / Drivetrain / Performance</p>
+                  <p class="catalog-copy">Mock de grupo premium para mostrar a integração de marcas respeitadas no ecossistema da loja.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-catalog-card data-terms="muc-off acessorios limpeza protecao">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/hero-bike.jpg" alt="Muc-Off Ultimate Care Kit">
+                  <span class="catalog-badge">Muc-Off</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Muc-Off Ultimate Care Kit</h2>
+                    <span class="catalog-price">R$ 349</span>
+                  </div>
+                  <p class="catalog-meta">Acessórios / Limpeza / Proteção</p>
+                  <p class="catalog-copy">Kit essencial para reforçar a ideia de cuidado, manutenção e pós-pedal.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalog-card" data-catalog-card data-terms="fizik vestuario acessorios saddle antares r3">
+                <div class="catalog-image-wrap">
+                  <img class="catalog-image" src="assets/thebiker-shop/bike-race.jpg" alt="Fizik Antares R3 Saddle">
+                  <span class="catalog-badge">Fizik</span>
+                </div>
+                <div class="catalog-body">
+                  <div class="catalog-topline">
+                    <h2 class="catalog-title">Fizik Antares R3</h2>
+                    <span class="catalog-price">R$ 899</span>
+                  </div>
+                  <p class="catalog-meta">Acessórios / Conforto / Performance</p>
+                  <p class="catalog-copy">Mock de item premium para completar a leitura de curadoria de alto padrão.</p>
+                  <div class="catalog-actions">
+                    <a class="solid-button" href="product.html">Ver produto</a>
+                    <a class="ghost-button" href="checkout.html">Comprar</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer section-frame" id="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand brand-logo-link brand-footer" href="index.html" aria-label="The Biker Shop - inicio">
+              <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+            </a>
+            <p>
+              Catálogo mockado da The Biker Shop para validar navegação, marca e estrutura de compra.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Comprar</h3>
+            <a href="catalog.html">Catálogo</a>
+            <a href="product.html">Produto</a>
+            <a href="checkout.html">Checkout</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Marcas</h3>
+            <a href="catalog.html">Scott</a>
+            <a href="catalog.html">Shimano</a>
+            <a href="catalog.html">Muc-Off</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Atendimento</h3>
+            <a href="index.html#footer">Quem Somos</a>
+            <a href="index.html#footer">Loja Física</a>
+            <a href="index.html#footer">Contato</a>
+            <a href="index.html#footer">Trocas e Devoluções</a>
+          </div>
+        </div>
+
+        <div class="container footer-bottom">
+          <p>&copy; 2026 The Biker Shop. All rights reserved.</p>
+          <div class="footer-squares" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/thebiker-shop.js" defer></script>
+</body>
+</html>

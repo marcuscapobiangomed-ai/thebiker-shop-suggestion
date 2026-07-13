@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Biker Shop - Checkout</title>
+  <meta name="description" content="Checkout mockado da The Biker Shop com carrinho, resumo e opções de pagamento.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Biker Shop - Checkout">
+  <meta property="og:description" content="Carrinho e checkout mockados para validar o fluxo de compra da loja.">
+  <meta property="og:image" content="assets/thebiker-shop/hero-bike.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Biker Shop - Checkout">
+  <meta name="twitter:description" content="Carrinho e checkout mockados para validar o fluxo de compra da loja.">
+  <link rel="preload" href="assets/fonts/syne-800.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/syne-700.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/thebiker-shop.css?v=thebiker-4">
+</head>
+<body class="shop-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-link" href="index.html" aria-label="The Biker Shop - inicio">
+          <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="catalog.html">Catálogo</a>
+          <a href="product.html">Produto</a>
+          <a href="checkout.html">Checkout</a>
+          <a href="index.html#footer">Suporte</a>
+        </nav>
+
+        <a class="store-btn" href="catalog.html">Voltar às compras</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-backdrop" hidden></div>
+    <aside class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catálogo</a>
+      <a href="product.html">Produto</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="index.html#footer">Suporte</a>
+      <a href="catalog.html" class="mobile-nav-store">Voltar às compras</a>
+    </aside>
+
+    <main class="shop-main" data-checkout-root>
+      <section class="shop-section">
+        <div class="container shop-hero-grid">
+          <div class="shop-card shop-card-pad">
+            <p class="page-kicker">Carrinho e checkout</p>
+            <h1 class="page-title">Finalize a compra com o mesmo padrão premium da vitrine.</h1>
+            <p class="page-copy">
+              Este checkout mockado usa os itens da curadoria The Biker Shop para validar carrinho, resumo e etapas de pagamento antes da integração real.
+            </p>
+
+            <div class="badge-row">
+              <span class="badge-pill">PIX 5% OFF</span>
+              <span class="badge-pill">12x sem juros</span>
+              <span class="badge-pill">Garantia Brasil</span>
+            </div>
+          </div>
+
+          <div class="hero-side-stack">
+            <div class="shop-card hero-side-card">
+              <span>Frete</span>
+              <strong>Grátis acima de R$ 299</strong>
+              <p>Mock de benefício que mantém a linguagem de oferta da marca.</p>
+            </div>
+            <div class="shop-card hero-side-card">
+              <span>Pagamento</span>
+              <strong>PIX, cartão e boleto</strong>
+              <p>Fluxo fictício para demonstrar as formas de pagamento mais usuais.</p>
+            </div>
+            <div class="shop-card hero-side-card">
+              <span>Suporte</span>
+              <strong>Loja física + atendimento</strong>
+              <p>Uma camada de confiança alinhada com o posicionamento real da The Biker Shop.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-section">
+        <div class="container checkout-shell">
+          <div class="cart-list">
+            <article class="cart-item" data-cart-item data-unit-price="39900">
+              <img class="cart-thumb" src="assets/thebiker-shop/hero-bike.jpg" alt="Scott Addict RC 20">
+              <div class="cart-info">
+                <h3>Scott Addict RC 20</h3>
+                <p>Bicicleta de estrada em carbono com assinatura Scott e foco em performance.</p>
+                <div class="cart-meta">
+                  <span>Tamanho M</span>
+                  <span>Black / Orange</span>
+                </div>
+                <div class="qty-control">
+                  <button class="qty-button" type="button" data-qty-minus aria-label="Diminuir quantidade">-</button>
+                  <span class="qty-value" data-qty-value>1</span>
+                  <button class="qty-button" type="button" data-qty-plus aria-label="Aumentar quantidade">+</button>
+                </div>
+              </div>
+              <div class="cart-side">
+                <span class="cart-price" data-line-total>R$ 39.900,00</span>
+                <a class="section-link" href="product.html">Ver produto</a>
+              </div>
+            </article>
+
+            <article class="cart-item" data-cart-item data-unit-price="349">
+              <img class="cart-thumb" src="assets/thebiker-shop/hero-bike.jpg" alt="Muc-Off Ultimate Care Kit">
+              <div class="cart-info">
+                <h3>Muc-Off Ultimate Care Kit</h3>
+                <p>Kit de limpeza e proteção para manter a bike impecável após o pedal.</p>
+                <div class="cart-meta">
+                  <span>Kit de cuidado</span>
+                  <span>Frete conjunto</span>
+                </div>
+                <div class="qty-control">
+                  <button class="qty-button" type="button" data-qty-minus aria-label="Diminuir quantidade">-</button>
+                  <span class="qty-value" data-qty-value>2</span>
+                  <button class="qty-button" type="button" data-qty-plus aria-label="Aumentar quantidade">+</button>
+                </div>
+              </div>
+              <div class="cart-side">
+                <span class="cart-price" data-line-total>R$ 698,00</span>
+                <a class="section-link" href="catalog.html">Mais acessórios</a>
+              </div>
+            </article>
+
+            <article class="cart-item" data-cart-item data-unit-price="899">
+              <img class="cart-thumb" src="assets/thebiker-shop/bike-race.jpg" alt="Fizik Antares R3">
+              <div class="cart-info">
+                <h3>Fizik Antares R3</h3>
+                <p>Selim premium para complementar a curadoria de performance.</p>
+                <div class="cart-meta">
+                  <span>Conforto</span>
+                  <span>Performance</span>
+                </div>
+                <div class="qty-control">
+                  <button class="qty-button" type="button" data-qty-minus aria-label="Diminuir quantidade">-</button>
+                  <span class="qty-value" data-qty-value>1</span>
+                  <button class="qty-button" type="button" data-qty-plus aria-label="Aumentar quantidade">+</button>
+                </div>
+              </div>
+              <div class="cart-side">
+                <span class="cart-price" data-line-total>R$ 899,00</span>
+                <a class="section-link" href="catalog.html">Ver acessórios</a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="summary-card shop-card shop-card-pad">
+            <p class="page-kicker">Resumo do pedido</p>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong data-summary-subtotal>R$ 0,00</strong>
+            </div>
+            <div class="summary-row">
+              <span>Frete</span>
+              <strong data-summary-shipping>Grátis</strong>
+            </div>
+            <div class="summary-row">
+              <span>Desconto PIX</span>
+              <strong data-summary-discount>- R$ 0,00</strong>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total</span>
+              <strong data-summary-total>R$ 0,00</strong>
+            </div>
+
+            <div class="filter-group">
+              <h3>Pagamento</h3>
+              <div class="payment-grid">
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="pix" checked>
+                  <div>
+                    <strong>PIX com 5% OFF</strong>
+                    <span>Desconto automático no mock do checkout.</span>
+                  </div>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="card">
+                  <div>
+                    <strong>Cartão em 12x</strong>
+                    <span>Fluxo visual para compra parcelada sem juros.</span>
+                  </div>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="payment" value="boleto">
+                  <div>
+                    <strong>Boleto</strong>
+                    <span>Opção adicional para demonstrar cobertura de checkout.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h3>Dados do cliente</h3>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Nome</label>
+                  <input id="name" type="text" placeholder="Seu nome">
+                </div>
+                <div class="field">
+                  <label for="email">E-mail</label>
+                  <input id="email" type="email" placeholder="voce@exemplo.com">
+                </div>
+                <div class="field">
+                  <label for="cep">CEP</label>
+                  <input id="cep" type="text" placeholder="00000-000">
+                </div>
+                <div class="field">
+                  <label for="city">Cidade</label>
+                  <input id="city" type="text" placeholder="Volta Redonda">
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <h3>Endereço</h3>
+              <div class="field">
+                <label for="address">Rua, número e complemento</label>
+                <textarea id="address" placeholder="Informe o endereço de entrega"></textarea>
+              </div>
+            </div>
+
+            <div class="checkout-actions">
+              <a class="solid-button" href="#">Finalizar pedido</a>
+              <a class="ghost-button" href="catalog.html">Continuar comprando</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="shop-section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-section">O que vem depois</p>
+              <div class="section-underline"></div>
+            </div>
+            <a class="section-link" href="index.html">Voltar ao site</a>
+          </div>
+
+          <div class="catalog-shell">
+            <article class="shop-card shop-card-pad">
+              <p class="page-kicker">Próximo passo</p>
+              <p class="page-copy">
+                Depois que o checkout mockado estiver validado, a próxima evolução natural é integrar pagamento real, frete e confirmação de pedido.
+              </p>
+            </article>
+            <article class="shop-card shop-card-pad">
+              <p class="page-kicker">Fluxo</p>
+              <p class="page-copy">
+                Carrinho, checkout e pós-compra podem seguir o mesmo visual premium para manter a marca The Biker Shop consistente.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer section-frame" id="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand brand-logo-link brand-footer" href="index.html" aria-label="The Biker Shop - inicio">
+              <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+            </a>
+            <p>
+              Checkout mockado da The Biker Shop com foco em experiência, não em transação real.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Comprar</h3>
+            <a href="catalog.html">Catálogo</a>
+            <a href="product.html">Produto</a>
+            <a href="checkout.html">Checkout</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Marcas</h3>
+            <a href="catalog.html">Scott</a>
+            <a href="catalog.html">Shimano</a>
+            <a href="catalog.html">Muc-Off</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Atendimento</h3>
+            <a href="index.html#footer">Quem Somos</a>
+            <a href="index.html#footer">Loja Física</a>
+            <a href="index.html#footer">Contato</a>
+            <a href="index.html#footer">Trocas e Devoluções</a>
+          </div>
+        </div>
+
+        <div class="container footer-bottom">
+          <p>&copy; 2026 The Biker Shop. All rights reserved.</p>
+          <div class="footer-squares" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/thebiker-shop.js" defer></script>
+</body>
+</html>
