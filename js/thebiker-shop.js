@@ -163,6 +163,7 @@
       catalogRoot.querySelectorAll("[data-catalog-filter]")
     );
     var catalogCount = catalogRoot.querySelector("[data-catalog-count]");
+    var catalogResults = catalogRoot.querySelector("[data-catalog-results]");
     var activeCatalogFilter = "all";
 
     try {
@@ -226,6 +227,17 @@
 
     if (catalogSearchButton) {
       catalogSearchButton.addEventListener("click", applyCatalogFilters);
+      catalogSearchButton.addEventListener("click", function () {
+        if (catalogResults) {
+          window.setTimeout(function () {
+            catalogResults.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            catalogResults.focus({ preventScroll: true });
+          }, 0);
+        }
+      });
     }
 
     setActiveFilter(activeCatalogFilter);

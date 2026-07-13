@@ -1103,7 +1103,70 @@ a {
 }
 
 .shop-hero-grid {
-  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.catalog-lead {
+  padding: 14px;
+}
+
+.catalog-lead .page-title {
+  font-size: clamp(1.55rem, 2.1vw, 2.35rem);
+}
+
+.catalog-lead .page-copy {
+  max-width: 52ch;
+  margin-top: 10px;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.catalog-lead .search-row {
+  max-width: 520px;
+  margin-top: 14px;
+}
+
+.catalog-lead .search-input,
+.catalog-lead .search-button {
+  min-height: 40px;
+}
+
+.catalog-lead .chip-row {
+  max-width: 520px;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.catalog-lead .chip-button {
+  min-height: 30px;
+  padding: 0 12px;
+  font-size: 0.68rem;
+}
+
+.checkout-lead {
+  padding: 14px;
+}
+
+.checkout-lead .page-title {
+  font-size: clamp(1.55rem, 2.1vw, 2.35rem);
+}
+
+.checkout-lead .page-copy {
+  max-width: 52ch;
+  margin-top: 10px;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.checkout-lead .badge-row {
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.checkout-lead .badge-pill {
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: 0.66rem;
 }
 
 .shop-card {
@@ -1339,6 +1402,10 @@ a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+}
+
+.catalog-results:focus {
+  outline: none;
 }
 
 .catalog-card {
@@ -1906,6 +1973,22 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .catalog-lead .page-title {
+    font-size: clamp(1.9rem, 4.8vw, 3rem);
+  }
+
+  .catalog-aside {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .checkout-lead .page-title {
+    font-size: clamp(1.9rem, 4.8vw, 3rem);
+  }
+
+  .checkout-aside {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .catalog-filters,
   .summary-card {
     position: static;
@@ -2033,7 +2116,25 @@ a {
   }
 
   .shop-section {
-    padding: 30px 0 68px;
+    padding: 20px 0 56px;
+  }
+
+  .catalog-lead {
+    padding: 14px;
+  }
+
+  .checkout-lead {
+    padding: 14px;
+  }
+
+  .catalog-lead .search-row {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .catalog-lead .search-button {
+    width: 100%;
+    min-width: 0;
   }
 
   .section-heading {
