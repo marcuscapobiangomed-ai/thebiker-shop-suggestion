@@ -1,6 +1,49 @@
 (function () {
   "use strict";
 
+  var themeButtons = Array.prototype.slice.call(
+    document.querySelectorAll("[data-theme-toggle]")
+  );
+
+  function setTheme(theme) {
+    var nextTheme = theme === "light" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    document.documentElement.style.colorScheme = nextTheme;
+
+    try {
+      localStorage.setItem("thebiker-theme", nextTheme);
+    } catch (error) {}
+
+    themeButtons.forEach(function (button) {
+      var label = button.querySelector(".theme-btn-label");
+      var icon = button.querySelector(".theme-btn-icon");
+      var isLight = nextTheme === "light";
+
+      button.setAttribute("aria-pressed", String(isLight));
+      button.setAttribute(
+        "aria-label",
+        isLight ? "Ativar modo escuro" : "Ativar modo claro"
+      );
+
+      if (label) {
+        label.textContent = isLight ? "Escuro" : "Claro";
+      }
+
+      if (icon) {
+        icon.textContent = isLight ? "☾" : "☼";
+      }
+    });
+  }
+
+  setTheme(document.documentElement.getAttribute("data-theme") || "dark");
+
+  themeButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+      setTheme(currentTheme === "light" ? "dark" : "light");
+    });
+  });
+
   var menuButton = document.querySelector(".menu-btn");
   var mobileNav = document.querySelector(".mobile-nav");
   var backdrop = document.querySelector(".mobile-backdrop");
