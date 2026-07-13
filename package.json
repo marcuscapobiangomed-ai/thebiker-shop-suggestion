@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build:hero-assets": "node scripts/build-hero-assets.mjs"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/syne": "^5.2.7",
+    "cheerio": "^1.2.0",
+    "playwright-core": "^1.61.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}

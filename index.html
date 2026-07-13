@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Biker Shop - Bikes, peças e performance premium</title>
+  <meta name="description" content="The Biker Shop: bikes, peças originais, nutrição, vestuário e acessórios premium. Frete grátis acima de R$ 299, 12x sem juros e 5% OFF no PIX.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Biker Shop - Bikes, peças e performance premium">
+  <meta property="og:description" content="Bikes, peças originais, nutrição e acessórios premium com frete grátis acima de R$ 299, 12x sem juros e 5% OFF no PIX.">
+  <meta property="og:image" content="assets/thebiker-shop/hero-bike.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Biker Shop - Bikes, peças e performance premium">
+  <meta name="twitter:description" content="Bikes, peças originais, nutrição e acessórios premium com frete grátis acima de R$ 299, 12x sem juros e 5% OFF no PIX.">
+  <link rel="preload" href="assets/fonts/syne-800.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/syne-700.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2">
+  <link rel="stylesheet" href="css/thebiker-shop.css?v=thebiker-3">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand brand-logo-link" href="#top" aria-label="The Biker Shop - inicio">
+          <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary">
+          <a href="#lineup">Bikes</a>
+          <a href="#technology">Peças</a>
+          <a href="#scott">Scott</a>
+          <a href="#blog">Novidades</a>
+          <a href="#footer">Suporte</a>
+        </nav>
+
+        <a class="store-btn" href="#lineup">Loja</a>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-backdrop" hidden></div>
+    <aside class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#lineup">Bikes</a>
+      <a href="#technology">Peças</a>
+      <a href="#scott">Scott</a>
+      <a href="#blog">Novidades</a>
+      <a href="#footer">Suporte</a>
+      <a href="#lineup" class="mobile-nav-store">Ir para loja</a>
+    </aside>
+
+    <main id="top">
+      <section class="hero section-frame" aria-label="The Biker Shop">
+        <div class="hero-carousel" data-hero-carousel>
+          <article class="hero-slide is-active" data-hero-slide>
+            <div class="hero-bg">
+              <img src="assets/thebiker-shop/hero-bike.jpg" alt="Matte black aero road bike in studio lighting" class="hero-bike" width="1920" height="1080" fetchpriority="high">
+              <div class="hero-vignette"></div>
+            </div>
+
+            <div class="container hero-inner">
+              <div class="hero-content">
+                <p class="eyebrow">The Biker Shop</p>
+                <h1 class="hero-title">
+                  <span class="hero-line hero-line-solid">Revendora SCOTT</span>
+                  <span class="hero-line hero-line-outline">oficial.</span>
+                  <span class="hero-line hero-line-solid">A sua loja</span>
+                  <span class="hero-line hero-line-accent">thebiker shop.</span>
+                </h1>
+                <p class="hero-copy">
+                  Marcas premium, pronta entrega e atendimento especializado para quem busca confiança na compra.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#lineup">Ver bikes</a>
+                  <a class="btn btn-secondary" href="#technology">Ver peças</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-badge" aria-label="Condicoes de pagamento">
+              <strong>12X</strong>
+              <span>Sem juros</span>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-hero-slide>
+            <div class="hero-bg">
+              <img src="assets/thebiker-shop/bike-gravel.jpg" alt="Gravel bike in studio lighting" class="hero-bike" width="1920" height="1080" loading="lazy">
+              <div class="hero-vignette"></div>
+            </div>
+
+            <div class="container hero-inner">
+              <div class="hero-content">
+                <p class="eyebrow">Condição da semana</p>
+                <h2 class="hero-title">
+                  <span class="hero-line hero-line-solid">5% OFF no PIX.</span>
+                  <span class="hero-line hero-line-outline">Frete grátis.</span>
+                  <span class="hero-line hero-line-solid">Seleção especial.</span>
+                  <span class="hero-line hero-line-accent">A partir de R$ 299.</span>
+                </h2>
+                <p class="hero-copy">
+                  Uma condição pensada para quem valoriza boa compra e entrega confiável.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#lineup">Ver condições</a>
+                  <a class="btn btn-secondary" href="#lineup">Explorar seleção</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-badge" aria-label="Oferta especial">
+              <strong>5%</strong>
+              <span>no PIX</span>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-hero-slide>
+            <div class="hero-bg">
+              <img src="assets/thebiker-shop/bike-race.jpg" alt="Road race bike in studio lighting" class="hero-bike" width="1920" height="1080" loading="lazy">
+              <div class="hero-vignette"></div>
+            </div>
+
+            <div class="container hero-inner">
+              <div class="hero-content">
+                <p class="eyebrow">Lançamento</p>
+                <h2 class="hero-title">
+                  <span class="hero-line hero-line-solid">Nova linha.</span>
+                  <span class="hero-line hero-line-outline">Para o seu</span>
+                  <span class="hero-line hero-line-solid">próximo</span>
+                  <span class="hero-line hero-line-accent">pedal.</span>
+                </h2>
+                <p class="hero-copy">
+                  Selecionamos bikes, peças e acessórios que acabaram de chegar para quem quer sair na frente com critério.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#lineup">Ver lançamento</a>
+                  <a class="btn btn-secondary" href="#lineup">Explorar novidades</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-badge" aria-label="Novidade">
+              <strong>NOVO</strong>
+              <span>Em destaque</span>
+            </div>
+          </article>
+
+          <article class="hero-slide" data-hero-slide>
+            <div class="hero-bg">
+              <img src="assets/thebiker-shop/tech-carbon.jpg" alt="Carbon fiber frame detail" class="hero-bike" width="1920" height="1080" loading="lazy">
+              <div class="hero-vignette"></div>
+            </div>
+
+            <div class="container hero-inner">
+              <div class="hero-content">
+                <p class="eyebrow">Conteúdo editorial</p>
+                <h2 class="hero-title">
+                  <span class="hero-line hero-line-solid">Guias.</span>
+                  <span class="hero-line hero-line-outline">Reviews.</span>
+                  <span class="hero-line hero-line-solid">Dicas</span>
+                  <span class="hero-line hero-line-accent">com critério.</span>
+                </h2>
+                <p class="hero-copy">
+                  Conteúdo prático sobre escolha, manutenção e performance, com olhar de quem pedala.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#blog">Ler conteúdo</a>
+                  <a class="btn btn-secondary" href="#footer">Falar com a loja</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-badge" aria-label="Editorial">
+              <strong>BLOG</strong>
+              <span>Conteúdo</span>
+            </div>
+          </article>
+
+          <button class="hero-arrow hero-prev" type="button" aria-label="Slide anterior" data-hero-prev>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="hero-arrow hero-next" type="button" aria-label="Proximo slide" data-hero-next>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div class="hero-dots" role="tablist" aria-label="Hero slides">
+            <button class="hero-dot is-active" type="button" data-hero-dot aria-label="Marca"></button>
+            <button class="hero-dot" type="button" data-hero-dot aria-label="Oferta"></button>
+            <button class="hero-dot" type="button" data-hero-dot aria-label="Novidade em destaque"></button>
+            <button class="hero-dot" type="button" data-hero-dot aria-label="Blog"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section lineup" id="lineup">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-section">Seleção em Destaque</p>
+              <div class="section-underline"></div>
+            </div>
+            <a class="section-link" href="#lineup">Ver seleção</a>
+          </div>
+
+          <div class="lineup-grid">
+            <article class="product-card group">
+              <div class="product-image-wrap">
+                <img src="assets/thebiker-shop/bike-gravel.jpg" alt="Gravel Premium" class="product-image">
+              </div>
+              <div class="product-body">
+                <div class="product-head">
+                  <h2>Gravel Premium</h2>
+                  <span class="product-price">$4,200</span>
+                </div>
+                <p class="product-meta">GRAVEL / ENDURANCE / CARBONO</p>
+                <button class="product-btn" type="button">Configure</button>
+              </div>
+            </article>
+
+            <article class="product-card group">
+              <div class="product-image-wrap">
+                <img src="assets/thebiker-shop/bike-electric.jpg" alt="E-Performance Urban" class="product-image">
+              </div>
+              <div class="product-body">
+                <div class="product-head">
+                  <h2>E-Performance Urban</h2>
+                  <span class="product-price">$3,850</span>
+                </div>
+                <p class="product-meta">E-BIKE / COMMUTE / ALUMÍNIO</p>
+                <button class="product-btn" type="button">Configure</button>
+              </div>
+            </article>
+
+            <article class="product-card group">
+              <div class="product-image-wrap">
+                <img src="assets/thebiker-shop/bike-race.jpg" alt="Road Race Carbon" class="product-image">
+              </div>
+              <div class="product-body">
+                <div class="product-head">
+                  <h2>Road Race Carbon</h2>
+                  <span class="product-price">$8,900</span>
+                </div>
+                <p class="product-meta">ESTRADA / COMPETIÇÃO / CARBONO</p>
+                <button class="product-btn" type="button">Configure</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scott" id="scott">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-section">Scott em destaque</p>
+              <div class="section-underline"></div>
+            </div>
+            <a class="section-link" href="#lineup">Ver coleção Scott</a>
+          </div>
+
+          <div class="scott-grid">
+            <article class="scott-panel scott-panel-main">
+              <p class="scott-kicker">Distribuição autorizada</p>
+              <h2 class="section-title section-title-stack">
+                <span>Scott.</span>
+                <span>Linha oficial.</span>
+                <span>Bikes, vestuário</span>
+                <span>e acessórios.</span>
+              </h2>
+              <p class="section-copy">
+                A Scott aparece como assinatura de performance na curadoria The Biker Shop, com produtos originais, garantia no Brasil e suporte especializado para quem quer montar a próxima pedalada com confiança.
+              </p>
+              <div class="scott-tags" aria-label="Categorias Scott">
+                <span>Bikes Scott</span>
+                <span>Vestuário Scott</span>
+                <span>Sapatilhas Scott</span>
+                <span>Acessórios Scott</span>
+              </div>
+            </article>
+
+            <div class="scott-family-grid">
+              <article class="scott-family-card">
+                <p class="scott-family-label">Bikes</p>
+                <h3>Spark / Scale / Road / E-Bikes</h3>
+                <p>As famílias Scott que sustentam a vitrine principal da marca no catálogo The Biker Shop.</p>
+              </article>
+
+              <article class="scott-family-card">
+                <p class="scott-family-label">Vestuário</p>
+                <h3>Peças técnicas e sapatilhas</h3>
+                <p>Seleção de itens Scott para completar a experiência do ciclista com mais conforto e presença.</p>
+              </article>
+
+              <article class="scott-family-card">
+                <p class="scott-family-label">Suporte</p>
+                <h3>Garantia oficial no Brasil</h3>
+                <p>Compra com origem clara, atendimento próximo e uma camada extra de segurança para o cliente.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section innovation" id="technology">
+        <div class="container innovation-grid">
+          <div class="innovation-visual">
+            <div class="innovation-visual-frame">
+              <img src="assets/thebiker-shop/tech-carbon.jpg" alt="Carbon fiber frame detail" class="innovation-image">
+            </div>
+          </div>
+
+          <div class="innovation-copy">
+            <p class="eyebrow eyebrow-section">Curadoria e Tecnologia</p>
+            <h2 class="section-title section-title-stack">
+              <span>Marcas</span>
+              <span>premium</span>
+              <span>de verdade</span>
+            </h2>
+            <p class="section-copy">
+              Ao lado da Scott, a The Biker Shop reúne Shimano, Muc-Off e outras marcas respeitadas, com pronta entrega e uma experiência de compra pensada para quem busca performance com segurança.
+            </p>
+
+            <div class="stats-grid">
+              <article class="stat">
+                <strong>12X</strong>
+                <span>Sem juros</span>
+              </article>
+              <article class="stat">
+                <strong>5%</strong>
+                <span>No PIX</span>
+              </article>
+            </div>
+
+            <a class="science-link" href="#footer">
+              <span>Ver a curadoria</span>
+              <span class="science-line"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section blog" id="blog">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow eyebrow-section">Guias e Conteúdo</p>
+              <div class="section-underline"></div>
+            </div>
+            <a class="section-link" href="#blog">Ver artigos</a>
+          </div>
+
+          <div class="blog-grid">
+            <article class="blog-card">
+              <div class="blog-thumb">
+                <img src="assets/thebiker-shop/hero-bike.jpg" alt="Bicicleta de estrada em estúdio" class="blog-image">
+              </div>
+              <div class="blog-body">
+                <p class="blog-meta">GUIA / COMPRA CERTA</p>
+                <h3>Como escolher a bike ideal para o seu perfil</h3>
+                <p>
+                  Um panorama claro sobre geometria, uso e faixa de investimento para acertar na escolha da primeira ou da próxima bike.
+                </p>
+                <a href="#footer" class="blog-link">Ler guia</a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-thumb">
+                <img src="assets/thebiker-shop/tech-carbon.jpg" alt="Detalhe de fibra de carbono" class="blog-image">
+              </div>
+              <div class="blog-body">
+                <p class="blog-meta">TECNOLOGIA / PERFORMANCE</p>
+                <h3>O que muda de verdade no quadro de carbono</h3>
+                <p>
+                  Entenda como a tecnologia impacta conforto, rigidez e desempenho.
+                </p>
+                <a href="#technology" class="blog-link">Explorar tecnologia</a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-thumb">
+                <img src="assets/thebiker-shop/bike-race.jpg" alt="Bike de competicao em estúdio" class="blog-image">
+              </div>
+              <div class="blog-body">
+                <p class="blog-meta">MANUTENÇÃO / DICAS</p>
+                <h3>Checklist rápido para manter sua bike sempre em dia</h3>
+                <p>
+                  Uma rotina simples para corrente, pneus, freios e limpeza que ajuda a pedalar com mais confiança.
+                </p>
+                <a href="#footer" class="blog-link">Ver dicas</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer section-frame" id="footer">
+        <div class="container footer-grid">
+          <div class="footer-brand-block">
+            <a class="brand brand-logo-link brand-footer" href="#top" aria-label="The Biker Shop - inicio">
+              <img src="scraper/branding/thebikershop_logo.webp" alt="The Biker Shop" class="brand-logo">
+            </a>
+            <p>
+              Produtos originais, curadoria premium e suporte de loja física em Volta Redonda / RJ.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h3>Categorias</h3>
+            <a href="#lineup">Bikes</a>
+            <a href="#lineup">Componentes</a>
+            <a href="#lineup">Lubrificantes</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Loja</h3>
+            <a href="#lineup">Nutrição</a>
+            <a href="#lineup">Vestuário</a>
+            <a href="#lineup">Acessórios</a>
+          </div>
+
+          <div class="footer-col">
+            <h3>Atendimento</h3>
+            <a href="#footer">Quem Somos</a>
+            <a href="#footer">Loja Física</a>
+            <a href="#footer">Como Comprar</a>
+            <a href="#footer">Contato</a>
+            <a href="#footer">Trocas e Devoluções</a>
+            <a href="#footer">Formas de Entrega</a>
+          </div>
+        </div>
+
+        <div class="container footer-bottom">
+          <p>&copy; 2026 The Biker Shop. All rights reserved.</p>
+          <div class="footer-squares" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="js/thebiker-shop.js" defer></script>
+</body>
+</html>
+
+
+
